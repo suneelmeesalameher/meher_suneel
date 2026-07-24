@@ -10,6 +10,14 @@ const data = {
   summary: "Software Engineer with 4+ years of experience building and scaling high-availability distributed systems at Amazon and GEICO. Strong expertise in Java, Node.js, .NET, and cloud platforms (AWS, Azure), with a focus on microservices, API design, and system reliability. Proven track record of improving performance, reducing latency, and delivering impactful customer-facing features in large-scale production systems.",
   experience: [
     {
+    role: "Software Development Engineer",
+    company: "Expedia Group",
+    location: "Seattle, WA",
+    period: "Joining Soon",
+    wip: true, // flag to render the construction placeholder instead of bullets
+    tags: [],
+  },
+    {
       role: "Engineer II",
       company: "GEICO",
       location: "Chevy Chase, MD (Remote)",
@@ -197,6 +205,28 @@ const css = `
     .nav-links { display: none; }
     .scroll-top { bottom: 20px; right: 20px; }
   }
+  .wip-box {
+  min-height: 110px;
+  border-radius: 4px;
+  background: #0a0a0a;
+  border: 1px dashed #2a2a2a;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.wip-stripes {
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(-45deg, rgba(251,191,36,0.05) 0 10px, transparent 10px 20px);
+  opacity: 0.6;
+}
+.wip-scene { position: relative; width: 100%; height: 24px; }
+.wip-truck { position: absolute; top: 0; font-size: 20px; transition: left 0.04s linear; transform: translateX(-50%); }
+.wip-text { font-family: 'DM Mono', monospace; font-size: 11px; color: #7a7a78; letter-spacing: 0.05em; z-index: 1; }
+.wip-cursor { color: #c8f060; animation: pulse-dot 1s step-end infinite; }
 `;
 
 const IconPin = () => (
@@ -226,6 +256,23 @@ const IconLinkedIn = () => (
   </svg>
 );
 
+const WipBuild = () => {
+  const [pos, setPos] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setPos(p => (p + 1) % 100), 40);
+    return () => clearInterval(t);
+  }, []);
+  return (
+    <div className="wip-box">
+      <div className="wip-stripes" />
+      <div className="wip-scene">
+        <div className="wip-truck" style={{ left: `${pos}%` }}>🚧</div>
+      </div>
+      <div className="wip-text">Details incoming<span className="wip-cursor">_</span></div>
+    </div>
+  );
+};
+
 function useReveal() {
   const ref = useRef();
   useEffect(() => {
@@ -237,6 +284,8 @@ function useReveal() {
   }, []);
   return ref;
 }
+
+
 
 function SectionLabel({ num, label }) {
   return (
@@ -356,12 +405,18 @@ export default function Portfolio() {
                 <a href={data.linkedin} target="_blank" rel="noreferrer" style={{ ...iconBox, color: "#7a7a78", fontSize: 14, textDecoration: "none" }}>↗</a>
               </div>
               <div className="exp-divider" />
-              <div className="exp-bullets">
-                {exp.bullets.map((b, j) => <div key={j} className="exp-bullet">{b}</div>)}
-              </div>
-              <div className="exp-tags">
-                {exp.tags.map(t => <span key={t} className="exp-tag">{t}</span>)}
-              </div>
+              {exp.wip ? (
+                <WipBuild />
+              ) : (
+                <div className="exp-bullets">
+                  {exp.bullets.map((b, j) => <div key={j} className="exp-bullet">{b}</div>)}
+                </div>
+              )}
+              {exp.tags.length > 0 && (
+                <div className="exp-tags">
+                  {exp.tags.map(t => <span key={t} className="exp-tag">{t}</span>)}
+                </div>
+              )}
             </div>
           ))}
         </div>
