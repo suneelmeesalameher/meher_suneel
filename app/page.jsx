@@ -256,22 +256,32 @@ const IconLinkedIn = () => (
   </svg>
 );
 
-const WipBuild = () => {
-  const [pos, setPos] = useState(0);
+function WipBuild() {
+  const [phase, setPhase] = useState("taxi");
   useEffect(() => {
-    const t = setInterval(() => setPos(p => (p + 1) % 100), 40);
-    return () => clearInterval(t);
+    const seq = [["taxi", 1800], ["takeoff", 1600], ["gone", 1000]];
+    let i = 0;
+    const run = () => {
+      setPhase(seq[i][0]);
+      setTimeout(() => { i = (i + 1) % seq.length; run(); }, seq[i][1]);
+    };
+    run();
   }, []);
+
   return (
-    <div className="wip-box">
-      <div className="wip-stripes" />
-      <div className="wip-scene">
-        <div className="wip-truck" style={{ left: `${pos}%` }}>🚧</div>
+    <div className="wip-airport">
+      <div className="wip-sky" />
+      <div className={`wip-plane wip-plane-${phase}`}>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c8f060" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2 L14 9 L21 12 L14 13 L13 20 L16 22 L12 20.5 L8 22 L11 20 L10 13 L3 12 L10 9 Z" fill="#c8f060" stroke="none" />
+        </svg>
       </div>
-      <div className="wip-text">Details incoming<span className="wip-cursor">_</span></div>
+      <div className="wip-runway" />
+      <div className="wip-runway-lines" />
+      <div className="wip-caption">Joining Expedia — details taking off soon</div>
     </div>
   );
-};
+}
 
 function useReveal() {
   const ref = useRef();
