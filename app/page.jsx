@@ -10,7 +10,7 @@ const data = {
   summary: "Software Engineer with 4+ years of experience building and scaling high-availability distributed systems at Amazon and GEICO. Strong expertise in Java, Node.js, .NET, and cloud platforms (AWS, Azure), with a focus on microservices, API design, and system reliability. Proven track record of improving performance, reducing latency, and delivering impactful customer-facing features in large-scale production systems.",
   experience: [
     {
-    role: "Software Development Engineer",
+    role: "Software Development Engineer II",
     company: "Expedia Group",
     location: "Seattle, WA",
     period: "Joining Soon",
@@ -21,7 +21,7 @@ const data = {
       role: "Engineer II",
       company: "GEICO",
       location: "Chevy Chase, MD (Remote)",
-      period: "Apr 2026 — Present",
+      period: "Apr 2026 — Jul 2026",
       bullets: [
         "Maintaining and enhancing enterprise-scale insurance applications using .NET, Azure, Flutter, and Dart",
         "Resolved high-severity production incidents and improved system stability across insurance data services",
@@ -35,7 +35,7 @@ const data = {
       role: "Software Development Engineer",
       company: "Amazon",
       location: "Seattle, WA",
-      period: "Jul 2022 — Present",
+      period: "Jul 2022 — Apr 2026",
       bullets: [
         "Building high-availability Java applications supporting 10+ global marketplaces and millions of users",
         "Reduced product return rates by 20% through UX-focused infrastructure improvements on Detail Page",
