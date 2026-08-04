@@ -394,8 +394,8 @@ export default function Portfolio() {
         </div>
         <div className="hero-meta">
           <div className="hero-meta-item"><IconPin /><span>{data.location}</span></div>
-          <div className="hero-meta-item"><IconBriefcase /><span>Amazon SDE</span></div>
-          <div className="hero-meta-item"><IconClock /><span>3+ Years Exp</span></div>
+          <div className="hero-meta-item"><IconBriefcase /><span>Expedia SDE</span></div>
+          <div className="hero-meta-item"><IconClock /><span>4+ Years Exp</span></div>
         </div>
         <div className="hero-line" />
       </div>
