@@ -382,7 +382,7 @@ export default function Portfolio() {
       {/* HERO */}
       <div id="about" className="hero">
         <div className="hero-glow" />
-        <div className="hero-eyebrow">Available for new opportunities</div>
+        {/* N/A <div className="hero-eyebrow">Available for new opportunities</div> */}
         <h1 className="hero-title">
           Srijan Reddy
           <span className="hero-title-italic">Software Engineer.</span>
