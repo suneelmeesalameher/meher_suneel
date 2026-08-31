@@ -88,67 +88,11 @@ const css = `
   /* Mock UI panel */
   .project-mock { background: #080808; display: flex; align-items: center; justify-content: center; padding: 24px; min-height: 280px; position: relative; overflow: hidden; }
 
-  /* ── Six Seven mock ── */
-  .sixseven-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; width: 100%; }
-  .phone-frame { width: 140px; height: 220px; border: 2px solid #2a2a2a; border-radius: 20px; background: #0a0a0a; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; position: relative; overflow: hidden; }
-  .phone-notch { width: 40px; height: 6px; background: #1f1f1f; border-radius: 3px; position: absolute; top: 10px; }
-  .phone-counter-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 36px; animation: seesaw 2s ease-in-out infinite; display: inline-block; }
-  .phone-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; }
-  .phone-awards { display: flex; gap: 5px; margin-top: 4px; }
-  .award-dot { width: 7px; height: 7px; border-radius: 50%; border: 1px solid #2a2a2a; }
-  .award-dot.earned { animation: glow-dot 1.5s ease-in-out infinite alternate; }
-  .phone-milestone { font-family: 'DM Mono', monospace; font-size: 8px; color: #7a7a78; letter-spacing: 0.1em; }
-
-  /* ── Inkplate mock ── */
-  .inkplate-frame { width: 200px; height: 150px; border: 2px solid #2a2a2a; border-radius: 4px; background: #e8e4dc; position: relative; overflow: hidden; display: flex; flex-direction: column; }
-  .inkplate-scanlines { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.04) 3px, rgba(0,0,0,0.04) 4px); pointer-events: none; z-index: 2; }
-  .inkplate-screen { flex: 1; display: flex; flex-direction: column; padding: 8px; }
-  .inkplate-panel { position: absolute; inset: 0; padding: 8px; display: flex; flex-direction: column; transition: opacity 0.8s; }
-  .inkplate-panel.hidden { opacity: 0; pointer-events: none; }
-
-  /* weather panel */
-  .ink-weather-title { font-family: 'DM Mono', monospace; font-size: 7px; color: #1a1a1a; letter-spacing: 0.15em; text-transform: uppercase; border-bottom: 1px solid #ccc; padding-bottom: 3px; margin-bottom: 6px; }
-  .ink-city-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
-  .ink-city-name { font-family: 'DM Mono', monospace; font-size: 8px; color: #1a1a1a; font-weight: bold; }
-  .ink-city-temp { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #1a1a1a; }
-  .ink-city-cond { font-family: 'DM Mono', monospace; font-size: 7px; color: #555; }
-  .ink-headline { font-family: 'DM Mono', monospace; font-size: 6.5px; color: #333; line-height: 1.5; margin-top: 6px; border-top: 1px solid #ccc; padding-top: 4px; }
-
-  /* year progress panel */
-  .ink-year-title { font-family: 'DM Mono', monospace; font-size: 7px; color: #1a1a1a; letter-spacing: 0.15em; text-transform: uppercase; border-bottom: 1px solid #ccc; padding-bottom: 3px; margin-bottom: 6px; }
-  .ink-pixel-grid { display: grid; grid-template-columns: repeat(26, 1fr); gap: 1px; margin-bottom: 6px; }
-  .ink-pixel { width: 4px; height: 4px; border-radius: 0.5px; }
-  .ink-pixel.filled { background: #1a1a1a; }
-  .ink-pixel.empty { background: #ccc; }
-  .ink-quote { font-family: 'DM Mono', monospace; font-size: 6px; color: #555; line-height: 1.5; font-style: italic; border-top: 1px solid #ccc; padding-top: 4px; }
-
-  /* spotify panel */
-  .ink-spotify-wrap { display: flex; gap: 8px; align-items: center; height: 100%; }
-  .ink-album { width: 56px; height: 56px; background: #333; border-radius: 2px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 20px; }
-  .ink-track-info { flex: 1; display: flex; flex-direction: column; gap: 4px; }
-  .ink-track-title { font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 700; color: #1a1a1a; }
-  .ink-track-artist { font-family: 'DM Mono', monospace; font-size: 7px; color: #555; }
-  .ink-progress-bar { height: 3px; background: #ccc; border-radius: 1px; margin-top: 6px; position: relative; overflow: hidden; }
-  .ink-progress-fill { height: 100%; background: #1a1a1a; border-radius: 1px; animation: progress-fill 4s linear infinite; }
-  .ink-now-playing { font-family: 'DM Mono', monospace; font-size: 6px; color: #555; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
-
-  /* ── ResumeMatch mock ── */
+  /* ── ProfileUnhider mock (browser frame) ── */
   .browser-frame { width: 200px; height: 220px; border: 1.5px solid #2a2a2a; border-radius: 6px; background: #0d0d0d; display: flex; flex-direction: column; overflow: hidden; }
   .browser-bar { height: 22px; background: #161616; border-bottom: 1px solid #1f1f1f; display: flex; align-items: center; padding: 0 8px; gap: 4px; flex-shrink: 0; }
   .browser-dot { width: 5px; height: 5px; border-radius: 50%; }
   .browser-url { flex: 1; height: 12px; background: #1f1f1f; border-radius: 2px; margin-left: 6px; }
-  .browser-body { flex: 1; display: flex; overflow: hidden; }
-  .browser-page { flex: 1; padding: 8px; background: #f8f8f8; overflow: hidden; }
-  .browser-page-line { height: 5px; background: #e0e0e0; border-radius: 2px; margin-bottom: 4px; }
-  .browser-panel { width: 72px; background: #0d0d0d; border-left: 1px solid #1f1f1f; padding: 8px 6px; display: flex; flex-direction: column; gap: 6px; flex-shrink: 0; }
-  .panel-label { font-family: 'DM Mono', monospace; font-size: 6px; color: #3d3d3b; letter-spacing: 0.1em; text-transform: uppercase; }
-  .panel-score-ring { width: 36px; height: 36px; border-radius: 50%; border: 3px solid #1f1f1f; display: flex; align-items: center; justify-content: center; margin: 2px auto; position: relative; }
-  .panel-score-ring svg { position: absolute; inset: -3px; width: calc(100% + 6px); height: calc(100% + 6px); transform: rotate(-90deg); }
-  .panel-score-text { font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 700; color: #c8f060; z-index: 1; }
-  .panel-kw { display: flex; flex-direction: column; gap: 3px; }
-  .panel-kw-row { display: flex; align-items: center; gap: 3px; }
-  .panel-kw-dot { width: 4px; height: 4px; border-radius: 50%; flex-shrink: 0; }
-  .panel-kw-label { font-family: 'DM Mono', monospace; font-size: 6px; color: #7a7a78; }
 
   /* Section label */
   .section-label { display: flex; align-items: center; gap: 16px; margin-bottom: 48px; }
@@ -163,27 +107,8 @@ const css = `
 
   /* Animations */
   @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-  @keyframes seesaw { 0%,100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
-  @keyframes glow-dot { from { box-shadow: 0 0 0 0 currentColor; } to { box-shadow: 0 0 6px 2px currentColor; } }
   @keyframes pulse-dot { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
-  @keyframes progress-fill { 0% { width: 15%; } 100% { width: 85%; } }
-  @keyframes score-draw { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 22; } }
-  @keyframes noai-toggle { 0%,45% { left: 14px; } 50%,95% { left: 2px; } 100% { left: 14px; } }
   @keyframes pulse-btn { 0%,100% { box-shadow: 0 0 0 0 rgba(200,240,96,0.4); } 50% { box-shadow: 0 0 0 4px rgba(200,240,96,0); } }
-  @keyframes color-cycle {
-    0%   { color: #a855f7; }
-    25%  { color: #f97316; }
-    50%  { color: #c8f060; }
-    75%  { color: #06b6d4; }
-    100% { color: #a855f7; }
-  }
-  @keyframes counter-tick {
-    0%  { opacity: 1; }
-    45% { opacity: 1; }
-    50% { opacity: 0; }
-    55% { opacity: 1; }
-    100%{ opacity: 1; }
-  }
 
   @media (max-width: 720px) {
     body { cursor: auto; }
@@ -197,256 +122,6 @@ const css = `
     .footer { padding: 24px; flex-direction: column; gap: 8px; }
   }
 `;
-
-// ── Six Seven Mock ──────────────────────────────────────────
-const PALETTES = [
-  { num: "6", color: "#a855f7", label: "MILESTONE" },
-  { num: "7", color: "#f97316", label: "UNLOCKED" },
-  { num: "67", color: "#c8f060", label: "LEGENDARY" },
-  { num: "100", color: "#06b6d4", label: "CENTURY" },
-];
-function SixSevenMock() {
-  const [idx, setIdx] = useState(0);
-  useEffect(() => {
-    const t = setInterval(() => setIdx(i => (i + 1) % PALETTES.length), 2000);
-    return () => clearInterval(t);
-  }, []);
-  const p = PALETTES[idx];
-  return (
-    <div className="sixseven-wrap">
-      <div className="phone-frame">
-        <div className="phone-notch" />
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6, marginTop: 8 }}>
-          <div className="phone-label" style={{ color: p.color, fontSize: 8, letterSpacing: "0.2em" }}>{p.label}</div>
-          <div className="phone-counter-num" style={{ color: p.color, transition: "color 0.4s" }}>{p.num}</div>
-          <div className="phone-milestone" style={{ color: p.color, opacity: 0.6 }}>next: {parseInt(p.num) + 1} taps</div>
-          <div className="phone-awards">
-            {[true, true, true, false, false, false].map((e, i) => (
-              <div key={i} className={`award-dot ${e ? "earned" : ""}`} style={{ background: e ? p.color : "transparent", borderColor: e ? p.color : "#2a2a2a", boxShadow: e ? `0 0 4px ${p.color}` : "none", transition: "all 0.4s" }} />
-            ))}
-          </div>
-          <div style={{ width: "70%", height: 3, background: "#1a1a1a", borderRadius: 2, marginTop: 2 }}>
-            <div style={{ width: "60%", height: "100%", background: p.color, borderRadius: 2, transition: "background 0.4s" }} />
-          </div>
-        </div>
-      </div>
-      <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 9, color: "#3d3d3b", letterSpacing: "0.1em", textAlign: "center" }}>
-        TAP · MILESTONE · AWARD
-      </div>
-    </div>
-  );
-}
-
-// ── Inkplate Mock ──────────────────────────────────────────
-const SCREENS = ["weather", "year", "spotify"];
-function InklateMock() {
-  const [screen, setScreen] = useState(0);
-  useEffect(() => {
-    const t = setInterval(() => setScreen(s => (s + 1) % SCREENS.length), 3000);
-    return () => clearInterval(t);
-  }, []);
-  const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
-  const totalDays = 365;
-  const pixels = Array.from({ length: 52 }, (_, i) => i < Math.floor(dayOfYear / 7));
-  return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
-      <div className="inkplate-frame">
-        <div className="inkplate-scanlines" />
-        {/* Weather */}
-        <div className="inkplate-panel" style={{ opacity: screen === 0 ? 1 : 0, transition: "opacity 0.6s" }}>
-          <div className="ink-weather-title">⛅ Weather · Real-time</div>
-          <div className="ink-city-row">
-            <div><div className="ink-city-name">Seattle</div><div className="ink-city-cond">Overcast</div></div>
-            <div className="ink-city-temp">52°F</div>
-          </div>
-          <div className="ink-city-row">
-            <div><div className="ink-city-name">Houston</div><div className="ink-city-cond">Sunny</div></div>
-            <div className="ink-city-temp">78°F</div>
-          </div>
-          <div className="ink-headline">📰 World News · Reddit<br />Global markets steady ahead of Fed decision — analysts weigh in on rate outlook</div>
-        </div>
-        {/* Year Progress */}
-        <div className="inkplate-panel" style={{ opacity: screen === 1 ? 1 : 0, transition: "opacity 0.6s" }}>
-          <div className="ink-year-title">📅 {new Date().getFullYear()} Progress · {dayOfYear}/{totalDays} days</div>
-          <div className="ink-pixel-grid">
-            {pixels.map((f, i) => <div key={i} className={`ink-pixel ${f ? "filled" : "empty"}`} />)}
-          </div>
-          <div className="ink-quote">"The impediment to action advances action. What stands in the way becomes the way." — Marcus Aurelius</div>
-        </div>
-        {/* Spotify */}
-        <div className="inkplate-panel" style={{ opacity: screen === 2 ? 1 : 0, transition: "opacity 0.6s" }}>
-          <div className="ink-now-playing">▶ Now Playing</div>
-          <div className="ink-spotify-wrap">
-            <div className="ink-album">🎵</div>
-            <div className="ink-track-info">
-              <div className="ink-track-title">Blinding Lights</div>
-              <div className="ink-track-artist">The Weeknd</div>
-              <div className="ink-progress-bar"><div className="ink-progress-fill" /></div>
-              <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 6, color: "#555", marginTop: 4 }}>2:14 / 3:20</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style={{ display: "flex", gap: 4 }}>
-        {SCREENS.map((_, i) => (
-          <div key={i} style={{ width: 5, height: 5, borderRadius: "50%", background: screen === i ? "#c8f060" : "#2a2a2a", transition: "background 0.3s" }} />
-        ))}
-      </div>
-      <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 9, color: "#3d3d3b", letterSpacing: "0.1em" }}>
-        E-INK · ESP32 · C++
-      </div>
-    </div>
-  );
-}
-
-// ── NoAI Search Mock ──────────────────────────────────────────
-  function NoAISearchMock() {
-    const [enabled, setEnabled] = useState(true);
-    const [counter, setCounter] = useState(124);
-  
-    useEffect(() => {
-      const cycle = setInterval(() => {
-        setEnabled(e => !e);
-        setCounter(c => c + Math.floor(Math.random() * 3) + 1);
-      }, 3000);
-      return () => clearInterval(cycle);
-    }, []);
-  
-    return (
-      <div className="browser-frame" style={{ width: 210, height: 240 }}>
-        <div className="browser-bar">
-          <div className="browser-dot" style={{ background: "#ff5f57" }} />
-          <div className="browser-dot" style={{ background: "#ffbd2e" }} />
-          <div className="browser-dot" style={{ background: "#28c840" }} />
-          <div className="browser-url" />
-          {/* Toolbar badge */}
-          <div style={{ marginLeft: 4, width: 14, height: 14, borderRadius: 2, background: enabled ? "#c8f060" : "#3d3d3b", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Syne', sans-serif", fontSize: 5, fontWeight: 700, color: enabled ? "#080808" : "#7a7a78", transition: "background 0.4s, color 0.4s", flexShrink: 0 }}>
-            {enabled ? "ON" : "OFF"}
-          </div>
-        </div>
-        <div style={{ flex: 1, background: "#fff", overflow: "hidden", display: "flex", flexDirection: "column" }}>
-          {/* Google search bar */}
-          <div style={{ padding: "6px 8px", borderBottom: "1px solid #edeff1", display: "flex", alignItems: "center", gap: 4, flexShrink: 0 }}>
-            <div style={{ fontFamily: "'Syne', sans-serif", fontSize: 9, fontWeight: 800, color: "#4285f4" }}>G</div>
-            <div style={{ flex: 1, height: 10, background: "#f1f3f4", borderRadius: 10 }} />
-          </div>
-  
-          {/* AI Overview block — only shown when disabled */}
-          <div style={{
-            margin: "5px 8px", background: "#f0f4ff", border: "1px solid #c5d3ff",
-            borderRadius: 3, padding: "5px 6px", overflow: "hidden",
-            maxHeight: enabled ? 0 : 52, marginTop: enabled ? 0 : 5,
-            opacity: enabled ? 0 : 1,
-            transition: "max-height 0.5s ease, opacity 0.5s, margin 0.5s",
-          }}>
-            <div style={{ fontFamily: "'Syne', sans-serif", fontSize: 7, fontWeight: 700, color: "#1a73e8", marginBottom: 3 }}>✦ AI Overview</div>
-            {[80, 95, 70].map((w, i) => (
-              <div key={i} style={{ height: 4, background: "#c5d3ff", borderRadius: 2, marginBottom: 2, width: `${w}%` }} />
-            ))}
-          </div>
-  
-          {/* Search results */}
-          <div style={{ flex: 1, padding: "4px 8px", display: "flex", flexDirection: "column", gap: 6 }}>
-            {[
-              { title: "Stack Overflow — answers", url: "stackoverflow.com", w: 85 },
-              { title: "MDN Web Docs", url: "developer.mozilla.org", w: 70 },
-              { title: "GitHub — srijanreddy", url: "github.com", w: 90 },
-            ].map((r, i) => (
-              <div key={i} style={{
-                opacity: enabled ? 1 : 0.4,
-                transform: enabled ? "translateY(0)" : "translateY(4px)",
-                transition: `opacity 0.4s ${i * 0.1}s, transform 0.4s ${i * 0.1}s`,
-              }}>
-                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 6, color: "#202124", marginBottom: 1 }}>{r.title}</div>
-                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 5.5, color: "#1a73e8" }}>{r.url}</div>
-                <div style={{ height: 3, background: "#f1f3f4", borderRadius: 2, marginTop: 2, width: `${r.w}%` }} />
-              </div>
-            ))}
-          </div>
-  
-          {/* Extension popup strip */}
-          <div style={{ borderTop: "1px solid #edeff1", padding: "5px 8px", display: "flex", alignItems: "center", justifyContent: "space-between", background: "#fafafa", flexShrink: 0 }}>
-            <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 6, color: "#878a8c" }}>{counter} redirects</div>
-            <div style={{
-              width: 24, height: 12, borderRadius: 6,
-              background: enabled ? "#c8f060" : "#3d3d3b",
-              position: "relative", transition: "background 0.4s", cursor: "pointer",
-            }}>
-              <div style={{
-                position: "absolute", top: 2, width: 8, height: 8, borderRadius: "50%", background: "#fff",
-                left: enabled ? 14 : 2, transition: "left 0.4s",
-              }} />
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-// ── ResumeMatch Mock ──────────────────────────────────────────
-function ResumeMatchMock() {
-  const [score, setScore] = useState(0);
-  const [analyzing, setAnalyzing] = useState(true);
-  useEffect(() => {
-    const t = setTimeout(() => {
-      setAnalyzing(false);
-      let s = 0;
-      const inc = setInterval(() => { s += 2; setScore(s); if (s >= 87) clearInterval(inc); }, 30);
-    }, 1500);
-    const reset = setInterval(() => { setScore(0); setAnalyzing(true); setTimeout(() => { setAnalyzing(false); let s2 = 0; const inc2 = setInterval(() => { s2 += 2; setScore(s2); if (s2 >= 87) clearInterval(inc2); }, 30); }, 1500); }, 7000);
-    return () => { clearTimeout(t); clearInterval(reset); };
-  }, []);
-  const circ = 2 * Math.PI * 14;
-  const offset = circ - (score / 100) * circ;
-  const keywords = [
-    { label: "Java", match: true },
-    { label: "AWS", match: true },
-    { label: "CI/CD", match: true },
-    { label: "Go", match: false },
-  ];
-  return (
-    <div className="browser-frame">
-      <div className="browser-bar">
-        <div className="browser-dot" style={{ background: "#ff5f57" }} />
-        <div className="browser-dot" style={{ background: "#ffbd2e" }} />
-        <div className="browser-dot" style={{ background: "#28c840" }} />
-        <div className="browser-url" />
-      </div>
-      <div className="browser-body">
-        <div className="browser-page">
-          {[90, 75, 85, 60, 70, 80, 55, 65].map((w, i) => (
-            <div key={i} className="browser-page-line" style={{ width: `${w}%` }} />
-          ))}
-        </div>
-        <div className="browser-panel">
-          <div className="panel-label">{analyzing ? "Analyzing…" : "Match Score"}</div>
-          <div className="panel-score-ring">
-            {!analyzing && (
-              <svg viewBox="0 0 36 36">
-                <circle cx="18" cy="18" r="14" fill="none" stroke="#1f1f1f" strokeWidth="3" />
-                <circle cx="18" cy="18" r="14" fill="none" stroke="#c8f060" strokeWidth="3"
-                  strokeDasharray={circ} strokeDashoffset={offset}
-                  strokeLinecap="round" style={{ transition: "stroke-dashoffset 0.05s linear" }} />
-              </svg>
-            )}
-            <div className="panel-score-text">{analyzing ? "…" : `${score}%`}</div>
-          </div>
-          {!analyzing && (
-            <div className="panel-kw">
-              <div className="panel-label" style={{ marginBottom: 2 }}>Keywords</div>
-              {keywords.map(k => (
-                <div key={k.label} className="panel-kw-row">
-                  <div className="panel-kw-dot" style={{ background: k.match ? "#c8f060" : "#3d3d3b" }} />
-                  <div className="panel-kw-label" style={{ color: k.match ? "#9a9a98" : "#3d3d3b" }}>{k.label}</div>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-}
 
 // ── ProfileUnhider Mock ──────────────────────────────────────────
 const REDDIT_POSTS = [
@@ -512,7 +187,7 @@ function ProfileUnhiderMock() {
           </div>
           <div style={{ flex: 1 }}>
             <div style={{ fontFamily: "'Syne', sans-serif", fontSize: 8, fontWeight: 700, color: phase === "hidden" ? "#edeff1" : "#1c1c1c", background: phase === "hidden" ? "#edeff1" : "transparent", borderRadius: 2, transition: "all 0.4s" }}>
-              {phase === "hidden" ? "██████████" : "u/srijanreddy"}
+              {phase === "hidden" ? "██████████" : "u/hidden_redditor"}
             </div>
             <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 6, color: "#878a8c", marginTop: 1 }}>
               {phase === "hidden" ? "Profile hidden" : `${count} items found`}
@@ -620,97 +295,9 @@ const projects = [
     ],
     tags: ["JavaScript", "Chrome MV3", "Reddit Indexing", "Content Scripts", "CSS", "Netlify"],
     heroTags: ["Chrome MV3", "Reddit Indexing", "JavaScript"],
-    github: "https://github.com/srijanreddy",
+    github: "https://github.com/suneelmeesalameher",
     demo: "https://profile-unhider.netlify.app",
     Mock: ProfileUnhiderMock,
-  },
-    {
-    id: "noaisearch",
-    number: "02",
-    title: "NoAI Search",
-    tagline: "Chrome extension that removes Google AI Overviews and restores classic results",
-    status: "live",
-    statusLabel: "Live on Chrome Web Store",
-    description: "A production-ready Chrome extension that permanently removes Google AI Overviews and restores classic search results. Built end-to-end from architecture to store submission — solving the problem of AI summaries pushing organic results below the fold with no native setting to disable them.",
-    bullets: [
-      "Two-layer blocking: URL redirection via udm=14 as primary, CSS/MutationObserver fallback for future Google changes",
-      "Background service worker handling URL rewriting and context menu integration",
-      "Content script with DOM observer for CSS-based fallback blocking that survives parameter changes",
-      "Popup UI with live redirect counter, toggle, and tab status detection",
-      "Toolbar badge reflecting live on/off state with full settings/options page",
-      "Published to Chrome Web Store with landing page, privacy policy, and SEO-optimized store listing",
-    ],
-    tags: ["TypeScript", "React", "Vite", "Chrome MV3", "Manifest V3", "Netlify"],
-    heroTags: ["Chrome MV3", "TypeScript", "React"],
-    github: null,
-    demo: "https://no-ai-search.netlify.app/",
-    Mock: NoAISearchMock,
-  },
-  {
-    id: "resumematch",
-    number: "03",
-    title: "ResumeMatch AI",
-    tagline: "Chrome extension that scores & tailors your resume against any job posting",
-    status: "wip",
-    statusLabel: "In Development",
-    description: "A Chrome extension that auto-detects job postings on LinkedIn, Greenhouse, Workday, and Lever — then scores your resume against the role using a two-pass AI pipeline (GPT-4o-mini verifies JD requirements before GPT-4o tailors the resume). Returns a match percentage with keyword-level breakdown, gap analysis, and one-click PDF export matching your original resume format.",
-    bullets: [
-      "Two-pass anti-hallucination AI: GPT-4o-mini verifies JD before GPT-4o tailors",
-      "Auto-detects job postings on LinkedIn, Greenhouse, Workday, and Lever via content scripts",
-      "Scores resume match % with keyword-level breakdown across skills, experience, and keywords",
-      "Gap analysis with evidence-validated hard/soft skill gaps",
-      "One-click PDF export matching original resume format via jsPDF + pdf.js",
-      "Zero backend — all data in chrome.storage.local, API key goes directly to OpenAI",
-    ],
-    tags: ["React", "TypeScript", "Vite", "Chrome MV3", "GPT-4o", "jsPDF", "pdf.js"],
-    heroTags: ["GPT-4o", "Chrome MV3", "TypeScript"],
-    github: null,
-    demo: "https://srijanreddy.vercel.app",
-    Mock: ResumeMatchMock,
-  },
-  {
-    id: "sixseven",
-    number: "04",
-    title: "Six Seven",
-    tagline: "A tap counter app with milestone awards & spring animations",
-    status: "live",
-    statusLabel: "Live on Play Store",
-    description: "A minimalist yet deeply satisfying tap counter app built around the numbers 6 and 7. Tap the screen, watch the counter climb, and unlock 13 unique awards at milestone numbers — each accompanied by dynamic color palette shifts and spring-physics animations that make every tap feel rewarding.",
-    bullets: [
-      "13-award milestone system with earned/locked states and glow animations",
-      "Spring-physics seesaw animation on the 6–7 display using React Native Reanimated",
-      "Dynamic color palettes that shift on each milestone hit",
-      "AsyncStorage persistence — progress survives app restarts",
-      "Milestone banner slide-in with staggered entrance animations",
-      "Published to Google Play Store under Alpharot Industries",
-    ],
-    tags: ["React Native", "Expo", "TypeScript", "Reanimated", "AsyncStorage", "expo-router"],
-    heroTags: ["React Native", "Reanimated", "TypeScript"],
-    github: "https://github.com/srijanreddy",
-    demo: null,
-    Mock: SixSevenMock,
-  },
-  {
-    id: "inkplate",
-    number: "05",
-    title: "E-ink Dashboard",
-    tagline: "A standalone hardware dashboard with weather, Spotify & stoic quotes",
-    status: "live",
-    statusLabel: "Built & Running",
-    description: "A personal always-on dashboard built with an Inkplate 6 (ESP32-based e-ink display). Three screens cycle automatically — real-time weather for two cities via WeatherAPI, Reddit world news headlines with a year-progress pixel grid and stoic quote, and a Spotify fullscreen mode that activates automatically when music is playing, showing album art and a live progress bar.",
-    bullets: [
-      "SpotifyEsp32 OAuth with NVS token persistence — survives reboots without re-auth",
-      "Auto-detects active Spotify playback and switches screens automatically",
-      "Real-time weather for two cities via WeatherAPI REST integration",
-      "Year progress pixel grid (52 weeks) with dynamically fetched stoic quotes",
-      "Runs standalone via USB-C, no cloud dependency beyond API calls",
-      "Built entirely in Arduino/C++ with efficient memory management for ESP32",
-    ],
-    tags: ["Arduino", "C++", "ESP32", "Inkplate 6", "SpotifyEsp32", "WeatherAPI", "OAuth"],
-    heroTags: ["C++", "ESP32", "SpotifyEsp32"],
-    github: "https://github.com/srijanreddy",
-    demo: null,
-    Mock: InklateMock,
   },
 ];
 
@@ -759,7 +346,7 @@ export default function Projects() {
 
       {/* NAV */}
       <nav className="nav">
-        <Link href="/" className="nav-logo">SR</Link>
+        <Link href="/" className="nav-logo">MM</Link>
         <div className="nav-links">
           <Link href="/" className="nav-link">About</Link>
           <Link href="/#experience" className="nav-link">Experience</Link>
@@ -822,10 +409,11 @@ export default function Projects() {
 
       {/* FOOTER */}
       <footer className="footer">
-        <span className="footer-text">© 2026 Srijan Reddy</span>
+        <span className="footer-text">© 2026 Mehersuneel Meesala</span>
         <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-          <a href="mailto:srijanreddy309@gmail.com" className="icon-btn"><IconEmail /></a>
-          <a href="https://www.linkedin.com/in/srijanreddy/" target="_blank" rel="noreferrer" className="icon-btn"><IconLinkedIn /></a>
+          <a href="mailto:mehersuneel.meesala@gmail.com" className="icon-btn"><IconEmail /></a>
+          <a href="https://www.linkedin.com/in/meher-suneel-meesala/" target="_blank" rel="noreferrer" className="icon-btn"><IconLinkedIn /></a>
+          <a href="https://github.com/suneelmeesalameher" target="_blank" rel="noreferrer" className="icon-btn" style={{ color: "#7a7a78" }}><IconGithub /></a>
           <span className="footer-text" style={{ marginLeft: 4 }}>Built with <span style={{ color: "#c8f060" }}>React</span> · <span style={{ color: "#c8f060" }}>Vercel</span></span>
         </div>
       </footer>

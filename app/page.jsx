@@ -2,75 +2,81 @@
 import { useState, useEffect, useRef } from "react";
 
 const data = {
-  name: "Srijan Reddy",
+  name: "Mehersuneel Meesala",
   title: "Software Engineer",
-  location: "Seattle, WA",
-  email: "srijanreddy309@gmail.com",
-  linkedin: "https://www.linkedin.com/in/srijanreddy/",
-  summary: "Software Engineer with 4+ years of experience building and scaling high-availability distributed systems at Amazon and GEICO. Strong expertise in Java, Node.js, .NET, and cloud platforms (AWS, Azure), with a focus on microservices, API design, and system reliability. Proven track record of improving performance, reducing latency, and delivering impactful customer-facing features in large-scale production systems.",
+  location: "VA, USA",
+  email: "mehersuneel.meesala@gmail.com",
+  linkedin: "https://www.linkedin.com/in/meher-suneel-meesala/",
+  github: "https://github.com/suneelmeesalameher",
+  summary: "Software Engineer with 5+ years of experience building large-scale backend systems and data pipelines across banking and enterprise platforms. Currently a Python Developer at M&T Bank, architecting AWS-based loan data ingestion pipelines processing 1TB+ of records. Background spans Node.js/TypeScript microservices, Java, and cloud infrastructure (AWS, Azure), with a focus on distributed systems, API design, and reliability at scale.",
   experience: [
     {
-    role: "Software Development Engineer II",
-    company: "Expedia Group",
-    location: "Seattle, WA",
-    period: "Joining Soon",
-    wip: true, // flag to render the construction placeholder instead of bullets
-    tags: [],
-  },
-    {
-      role: "Engineer II",
-      company: "GEICO",
-      location: "Chevy Chase, MD (Remote)",
-      period: "Apr 2026 — Jul 2026",
+      role: "Python Developer",
+      company: "M&T Bank",
+      location: "Remote, USA",
+      period: "Mar 2024 — July 2026",
       bullets: [
-        "Maintaining and enhancing enterprise-scale insurance applications using .NET, Azure, Flutter, and Dart",
-        "Resolved high-severity production incidents and improved system stability across insurance data services",
-        "Developed batch-processing workflows for insurance data pipelines, improving backend processing efficiency",
-        "Built and enhanced Flutter-based UI features for commercial insurance applications, improving usability and user experience",
-        "Integrated REST APIs across internal systems to improve data flow and service interoperability",
+        "Built a scalable loan data ingestion pipeline on AWS to process and distribute 1TB+ loan records across downstream risk, servicing, and analytics systems",
+        "Re-architected the Python ingestion pipeline handling 30–40% of total loan-data payloads, reducing processing time from 15 minutes to 6.5 minutes",
+        "Split the write path into Lambda REST APIs for loan updates and ECS containers for batch processing, cutting an 8-minute wait for burst traffic",
+        "Rebuilt event distribution using SNS fan-out and SQS durable queuing with PostgreSQL RDS and S3, reducing failure-driven reprocessing volume by 65%",
+        "Optimized loan-data partitioning in S3 by loan type, processing date, and region, reducing unnecessary data scans by 65% and improving query performance by 40%",
+        "Automated loan-data validation workflows for data engineers, reducing manual validation effort from 25 minutes to 7 minutes",
       ],
-      tags: [".NET", "Azure", "Flutter", "Dart", "REST APIs", "Microservices"],
+      tags: ["Python", "AWS", "Lambda", "ECS", "SNS/SQS", "PostgreSQL"],
     },
     {
-      role: "Software Development Engineer",
-      company: "Amazon",
-      location: "Seattle, WA",
-      period: "Jul 2022 — Apr 2026",
+      role: "Software Engineer",
+      company: "Tata Consultancy Services · Client: Baker Hughes",
+      location: "Hyderabad, TG",
+      period: "Oct 2021 — Jan 2023",
       bullets: [
-        "Building high-availability Java applications supporting 10+ global marketplaces and millions of users",
-        "Reduced product return rates by 20% through UX-focused infrastructure improvements on Detail Page",
-        "Developed Node.js APIs handling 1M+ requests/day with minimal latency via async programming",
-        "Reduced API response times by 30% by architecting and integrating internal service APIs",
-        "Cut deployment times by 40% by automating Jenkins/GitLab CI pipelines with canary & blue-green deployments",
-        "Maintained 99.9% uptime as primary on-call engineer resolving P0/P1 incidents",
+        "Built and scaled high-availability distributed microservices for a self-service (low-code) analytics platform serving 50,000 global enterprise users",
+        "Led a 4-member cross-functional team migrating a legacy monolith to microservices, achieving sub-100ms response times",
+        "Built and documented a custom Node.js library integrating Keycloak for tenant-aware token generation, standardizing role-based authorization across 5+ microservices",
+        "Developed RESTful services in Node.js and TypeScript, applying OOP and SOLID principles to reduce API latency by 40%",
+        "Optimized SQL queries to enhance backend data fetching efficiency, resulting in a 20% performance improvement",
+        "Improved API reliability with 90%+ test coverage using JUnit and Mockito/Jest",
       ],
-      tags: ["Java", "Node.js", "AWS", "Microservices", "CI/CD", "DynamoDB"],
+      tags: ["Node.js", "TypeScript", "Microservices", "Keycloak", "SQL", "JUnit/Jest"],
+    },
+    {
+      role: "Associate Software Engineer",
+      company: "Tata Consultancy Services · Client: General Electric",
+      location: "Hyderabad, TG",
+      period: "Nov 2020 — Oct 2021",
+      bullets: [
+        "Engineered a backend service for real-time wind turbine analytics handling concurrent Mosquitto MQTT ingestion from distributed field devices, cutting ingestion latency by 30% and storage costs by 20%",
+        "Served as primary on-call engineer across the SDLC, resolving P0/P1 incidents and building Grafana dashboards, sustaining 99.9% uptime on the Promise-to-Pay platform",
+        "Optimized Jenkins CI/CD pipelines and implemented security policies and data flow monitoring across Apigee middleware",
+      ],
+      tags: ["MQTT", "Grafana", "Jenkins", "Apigee", "CI/CD"],
     },
   ],
 skills: [
   {
-    group: "Languages",
-    items: ["Java", "Python", "Kotlin", "TypeScript", "JavaScript"]
+    group: "Front-End",
+    items: ["JavaScript", "React", "Angular", "TypeScript", "HTML", "CSS"]
   },
   {
-    group: "Backend & Systems",
-    items: ["Spring Boot", "Node.js", ".NET Core", "REST APIs", "Microservices"]
+    group: "Back-End",
+    items: ["Python", "Node.js", "Go", "Java", "C", "C++"]
   },
   {
     group: "Cloud & Infrastructure",
-    items: ["AWS (S3, Lambda, Glue)", "Azure", "Docker", "Kubernetes", "Terraform", "CloudFormation"]
+    items: ["AWS (Glue, Redshift)", "Azure", "Docker", "Kubernetes", "Terraform"]
   },
   {
     group: "Databases",
-    items: ["MySQL", "MongoDB", "DynamoDB"]
+    items: ["MySQL", "Postgres", "MongoDB", "Cassandra"]
   },
   {
-    group: "Frontend",
-    items: ["React Native", "Angular.js", "Flutter", "Dart", "HTML", "CSS"]
+    group: "Data & ML",
+    items: ["NumPy", "PyTorch", "TensorFlow", "Pandas"]
   },
   {
-    group: "DevOps & CI/CD",
-    items: ["Jenkins", "GitLab CI", "CI/CD Pipelines", "Grafana"]
+    group: "Tools & Observability",
+    items: ["Git/GitHub", "Jenkins", "Splunk", "Grafana", "Datadog", "Jupyter Notebook", "PyCharm"]
   }
 ],
 };
@@ -205,28 +211,6 @@ const css = `
     .nav-links { display: none; }
     .scroll-top { bottom: 20px; right: 20px; }
   }
-  .wip-box {
-  min-height: 110px;
-  border-radius: 4px;
-  background: #0a0a0a;
-  border: 1px dashed #2a2a2a;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-.wip-stripes {
-  position: absolute; inset: 0;
-  background: repeating-linear-gradient(-45deg, rgba(251,191,36,0.05) 0 10px, transparent 10px 20px);
-  opacity: 0.6;
-}
-.wip-scene { position: relative; width: 100%; height: 24px; }
-.wip-truck { position: absolute; top: 0; font-size: 20px; transition: left 0.04s linear; transform: translateX(-50%); }
-.wip-text { font-family: 'DM Mono', monospace; font-size: 11px; color: #7a7a78; letter-spacing: 0.05em; z-index: 1; }
-.wip-cursor { color: #c8f060; animation: pulse-dot 1s step-end infinite; }
 `;
 
 const IconPin = () => (
@@ -255,33 +239,11 @@ const IconLinkedIn = () => (
     <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
   </svg>
 );
-
-function WipBuild() {
-  const [phase, setPhase] = useState("taxi");
-  useEffect(() => {
-    const seq = [["taxi", 1800], ["takeoff", 1600], ["gone", 1000]];
-    let i = 0;
-    const run = () => {
-      setPhase(seq[i][0]);
-      setTimeout(() => { i = (i + 1) % seq.length; run(); }, seq[i][1]);
-    };
-    run();
-  }, []);
-
-  return (
-    <div className="wip-airport">
-      <div className="wip-sky" />
-      <div className={`wip-plane wip-plane-${phase}`}>
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c8f060" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2 L14 9 L21 12 L14 13 L13 20 L16 22 L12 20.5 L8 22 L11 20 L10 13 L3 12 L10 9 Z" fill="#c8f060" stroke="none" />
-        </svg>
-      </div>
-      <div className="wip-runway" />
-      <div className="wip-runway-lines" />
-      <div className="wip-caption">Joining Expedia — details taking off soon</div>
-    </div>
-  );
-}
+const IconGithub = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8f060" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  </svg>
+);
 
 function useReveal() {
   const ref = useRef();
@@ -382,9 +344,8 @@ export default function Portfolio() {
       {/* HERO */}
       <div id="about" className="hero">
         <div className="hero-glow" />
-        {/* N/A <div className="hero-eyebrow">Available for new opportunities</div> */}
         <h1 className="hero-title">
-          Srijan Reddy
+          Mehersuneel Meesala
           <span className="hero-title-italic">Software Engineer.</span>
         </h1>
         <p className="hero-summary">{data.summary}</p>
@@ -394,8 +355,8 @@ export default function Portfolio() {
         </div>
         <div className="hero-meta">
           <div className="hero-meta-item"><IconPin /><span>{data.location}</span></div>
-          <div className="hero-meta-item"><IconBriefcase /><span>Expedia SDE</span></div>
-          <div className="hero-meta-item"><IconClock /><span>4+ Years Exp</span></div>
+          <div className="hero-meta-item"><IconBriefcase /><span>M&T Bank</span></div>
+          <div className="hero-meta-item"><IconClock /><span>5+ Years Exp</span></div>
         </div>
         <div className="hero-line" />
       </div>
@@ -415,18 +376,12 @@ export default function Portfolio() {
                 <a href={data.linkedin} target="_blank" rel="noreferrer" style={{ ...iconBox, color: "#7a7a78", fontSize: 14, textDecoration: "none" }}>↗</a>
               </div>
               <div className="exp-divider" />
-              {exp.wip ? (
-                <WipBuild />
-              ) : (
-                <div className="exp-bullets">
-                  {exp.bullets.map((b, j) => <div key={j} className="exp-bullet">{b}</div>)}
-                </div>
-              )}
-              {exp.tags.length > 0 && (
-                <div className="exp-tags">
-                  {exp.tags.map(t => <span key={t} className="exp-tag">{t}</span>)}
-                </div>
-              )}
+              <div className="exp-bullets">
+                {exp.bullets.map((b, j) => <div key={j} className="exp-bullet">{b}</div>)}
+              </div>
+              <div className="exp-tags">
+                {exp.tags.map(t => <span key={t} className="exp-tag">{t}</span>)}
+              </div>
             </div>
           ))}
         </div>
@@ -457,7 +412,7 @@ export default function Portfolio() {
             <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 36, fontWeight: 400, lineHeight: 1.2, marginBottom: 20 }}>
               Let's build<br /><span style={{ fontStyle: "italic", color: "#7a7a78" }}>something great.</span>
             </h2>
-            <p className="contact-blurb">Open to senior SDE roles, staff engineering positions, and interesting problems. Currently based in Seattle.</p>
+            <p className="contact-blurb">Open to senior software engineering roles and interesting backend/distributed-systems problems. Currently based in VA.</p>
             <div style={{ marginTop: 20, display: "flex", flexDirection: "column" }}>
               <a href={`mailto:${data.email}`} className="contact-link">
                 <div style={iconBox}><IconEmail /></div>
@@ -470,7 +425,14 @@ export default function Portfolio() {
                 <div style={iconBox}><IconLinkedIn /></div>
                 <div>
                   <div className="contact-link-label">LinkedIn</div>
-                  <div className="contact-link-value">linkedin.com/in/srijanreddy</div>
+                  <div className="contact-link-value">linkedin.com/in/meher-suneel-meesala</div>
+                </div>
+              </a>
+              <a href={data.github} target="_blank" rel="noreferrer" className="contact-link">
+                <div style={iconBox}><IconGithub /></div>
+                <div>
+                  <div className="contact-link-label">GitHub</div>
+                  <div className="contact-link-value">github.com/suneelmeesalameher</div>
                 </div>
               </a>
             </div>
@@ -507,10 +469,11 @@ export default function Portfolio() {
 
       {/* FOOTER */}
       <footer style={{ borderTop: "1px solid #1f1f1f", padding: "28px 48px", display: "flex", justifyContent: "space-between", alignItems: "center", maxWidth: 900, margin: "0 auto" }}>
-        <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, color: "#3d3d3b" }}>© 2026 Srijan Reddy</span>
+        <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, color: "#3d3d3b" }}>© 2026 Mehersuneel Meesala</span>
         <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
           <a href={`mailto:${data.email}`} className="icon-btn"><IconEmail /></a>
           <a href={data.linkedin} target="_blank" rel="noreferrer" className="icon-btn"><IconLinkedIn /></a>
+          <a href={data.github} target="_blank" rel="noreferrer" className="icon-btn" style={{ color: "#7a7a78" }}><IconGithub /></a>
           <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, color: "#3d3d3b", marginLeft: 4 }}>
             Built with <span style={{ color: "#c8f060" }}>React</span> · <span style={{ color: "#c8f060" }}>Vercel</span>
           </span>

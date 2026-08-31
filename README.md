@@ -1,4 +1,4 @@
-# Srijan Reddy Portfolio
+# Mehersuneel Meesala Portfolio
 
 A modern personal portfolio built with Next.js, React, and custom CSS animations.
 
@@ -9,7 +9,7 @@ This site includes:
 
 ## Live Site
 
-https://srijanreddy.vercel.app
+TBD
 
 ## Tech Stack
 
