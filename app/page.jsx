@@ -1,29 +1,29 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 
 const data = {
   name: "Mehersuneel Meesala",
   title: "Software Engineer",
-  location: "VA, USA",
-  email: "mehersuneel.meesala@gmail.com",
+  location: "Bangalore, India",
+  email: "msuneel2812@gmail.com",
   linkedin: "https://www.linkedin.com/in/meher-suneel-meesala/",
   github: "https://github.com/suneelmeesalameher",
-  summary: "Software Engineer with 5+ years of experience building large-scale backend systems and data pipelines across banking and enterprise platforms. Currently a Python Developer at M&T Bank, architecting AWS-based loan data ingestion pipelines processing 1TB+ of records. Background spans Node.js/TypeScript microservices, Java, and cloud infrastructure (AWS, Azure), with a focus on distributed systems, API design, and reliability at scale.",
+  summary: "Software Engineer with 3+ years of experience building and scaling full-stack applications, distributed systems, and microservices across banking, energy, and enterprise platforms. Strong expertise in Java, Spring Boot, Node.js, TypeScript, Angular, PostgreSQL, and AWS, with a focus on API development, system reliability, and performance. Proven track record of reducing latency, improving scalability, strengthening application security, and delivering production features for systems supporting thousands of users.",
   experience: [
     {
-      role: "Python Developer",
+      role: "Software Engineer",
       company: "M&T Bank",
       location: "Remote, USA",
-      period: "Mar 2024 — July 2026",
+      period: "Mar 2025 — Aug 2026",
       bullets: [
-        "Built a scalable loan data ingestion pipeline on AWS to process and distribute 1TB+ loan records across downstream risk, servicing, and analytics systems",
-        "Re-architected the Python ingestion pipeline handling 30–40% of total loan-data payloads, reducing processing time from 15 minutes to 6.5 minutes",
-        "Split the write path into Lambda REST APIs for loan updates and ECS containers for batch processing, cutting an 8-minute wait for burst traffic",
-        "Rebuilt event distribution using SNS fan-out and SQS durable queuing with PostgreSQL RDS and S3, reducing failure-driven reprocessing volume by 65%",
-        "Optimized loan-data partitioning in S3 by loan type, processing date, and region, reducing unnecessary data scans by 65% and improving query performance by 40%",
-        "Automated loan-data validation workflows for data engineers, reducing manual validation effort from 25 minutes to 7 minutes",
+        "Managed customer, loan applicant, and property data across PostgreSQL systems supporting 200K+ users and 1M+ properties, maintaining reliable data access and supporting backend application workflows used by product and engineering teams",
+        "Built and maintained REST APIs using Spring Boot for property listing and offer submission workflows",
+        "Integrated backend services with Angular applications to deliver new features and business-requested functionality in production",
+        "Collaborated with product teams to design new frontend and backend features, enhancing user experience and website appearance",
+        "Resolved day-to-day cyber assurance and security remediation tickets by investigating application vulnerabilities and applying fixes",
       ],
-      tags: ["Python", "AWS", "Lambda", "ECS", "SNS/SQS", "PostgreSQL"],
+      tags: ["Spring Boot", "Angular", "PostgreSQL", "REST APIs", "Security"],
     },
     {
       role: "Software Engineer",
@@ -55,28 +55,28 @@ const data = {
   ],
 skills: [
   {
-    group: "Front-End",
-    items: ["JavaScript", "React", "Angular", "TypeScript", "HTML", "CSS"]
+    group: "Languages",
+    items: ["Java", "Python", "JavaScript", "TypeScript", "Go", "C", "C++"]
   },
   {
-    group: "Back-End",
-    items: ["Python", "Node.js", "Go", "Java", "C", "C++"]
+    group: "Backend & Systems",
+    items: ["Node.js", "Spring Boot", "REST APIs", "Microservices", "NumPy", "Pandas", "PyTorch", "TensorFlow"]
   },
   {
     group: "Cloud & Infrastructure",
-    items: ["AWS (Glue, Redshift)", "Azure", "Docker", "Kubernetes", "Terraform"]
+    items: ["AWS (S3, Lambda, ECS)", "Azure", "Docker", "Kubernetes", "Terraform"]
   },
   {
     group: "Databases",
     items: ["MySQL", "Postgres", "MongoDB", "Cassandra"]
   },
   {
-    group: "Data & ML",
-    items: ["NumPy", "PyTorch", "TensorFlow", "Pandas"]
+    group: "Frontend",
+    items: ["React", "Angular", "HTML", "CSS"]
   },
   {
-    group: "Tools & Observability",
-    items: ["Git/GitHub", "Jenkins", "Splunk", "Grafana", "Datadog", "Jupyter Notebook", "PyCharm"]
+    group: "DevOps & CI/CD",
+    items: ["Jenkins", "Git/GitHub", "Grafana", "Splunk", "Datadog", "Jupyter Notebook", "PyCharm"]
   }
 ],
 };
@@ -337,7 +337,7 @@ export default function Portfolio() {
           {["about", "experience", "skills", "contact"].map(s => (
             <span key={s} className={`nav-link ${activeSection === s ? "active" : ""}`} onClick={() => scrollTo(s)}>{s}</span>
           ))}
-          <a href="/projects" className="nav-link" style={{ textDecoration: "none" }}>projects</a>
+          <Link href="/projects" className="nav-link" style={{ textDecoration: "none" }}>projects</Link>
         </div>
       </nav>
 
@@ -356,7 +356,7 @@ export default function Portfolio() {
         <div className="hero-meta">
           <div className="hero-meta-item"><IconPin /><span>{data.location}</span></div>
           <div className="hero-meta-item"><IconBriefcase /><span>M&T Bank</span></div>
-          <div className="hero-meta-item"><IconClock /><span>5+ Years Exp</span></div>
+          <div className="hero-meta-item"><IconClock /><span>3+ Years Exp</span></div>
         </div>
         <div className="hero-line" />
       </div>
@@ -412,7 +412,7 @@ export default function Portfolio() {
             <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 36, fontWeight: 400, lineHeight: 1.2, marginBottom: 20 }}>
               Let's build<br /><span style={{ fontStyle: "italic", color: "#7a7a78" }}>something great.</span>
             </h2>
-            <p className="contact-blurb">Open to senior software engineering roles and interesting backend/distributed-systems problems. Currently based in VA.</p>
+            <p className="contact-blurb">Open to senior software engineering roles and interesting backend/distributed-systems problems. Currently based in Bangalore.</p>
             <div style={{ marginTop: 20, display: "flex", flexDirection: "column" }}>
               <a href={`mailto:${data.email}`} className="contact-link">
                 <div style={iconBox}><IconEmail /></div>

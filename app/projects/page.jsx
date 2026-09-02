@@ -411,7 +411,7 @@ export default function Projects() {
       <footer className="footer">
         <span className="footer-text">© 2026 Mehersuneel Meesala</span>
         <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-          <a href="mailto:mehersuneel.meesala@gmail.com" className="icon-btn"><IconEmail /></a>
+          <a href="mailto:msuneel2812@gmail.com" className="icon-btn"><IconEmail /></a>
           <a href="https://www.linkedin.com/in/meher-suneel-meesala/" target="_blank" rel="noreferrer" className="icon-btn"><IconLinkedIn /></a>
           <a href="https://github.com/suneelmeesalameher" target="_blank" rel="noreferrer" className="icon-btn" style={{ color: "#7a7a78" }}><IconGithub /></a>
           <span className="footer-text" style={{ marginLeft: 4 }}>Built with <span style={{ color: "#c8f060" }}>React</span> · <span style={{ color: "#c8f060" }}>Vercel</span></span>
