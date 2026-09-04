@@ -15,7 +15,7 @@ const data = {
       role: "Software Engineer",
       company: "M&T Bank",
       location: "Remote, USA",
-      period: "Mar 2025 — Aug 2026",
+      period: "Mar 2025 — Present",
       bullets: [
         "Managed customer, loan applicant, and property data across PostgreSQL systems supporting 200K+ users and 1M+ properties, maintaining reliable data access and supporting backend application workflows used by product and engineering teams",
         "Built and maintained REST APIs using Spring Boot for property listing and offer submission workflows",
@@ -53,32 +53,32 @@ const data = {
       tags: ["MQTT", "Grafana", "Jenkins", "Apigee", "CI/CD"],
     },
   ],
-skills: [
-  {
-    group: "Languages",
-    items: ["Java", "Python", "JavaScript", "TypeScript", "Go", "C", "C++"]
-  },
-  {
-    group: "Backend & Systems",
-    items: ["Node.js", "Spring Boot", "REST APIs", "Microservices"]
-  },
-  {
-    group: "Cloud & Infrastructure",
-    items: ["AWS (S3, Lambda, ECS)", "Azure", "Docker", "Kubernetes", "Terraform", "Kafka", "MQTT"]
-  },
-  {
-    group: "Databases",
-    items: ["MySQL", "Postgres", "MongoDB", "Cassandra"]
-  },
-  {
-    group: "Frontend",
-    items: ["React", "Angular", "HTML", "CSS"]
-  },
-  {
-    group: "DevOps & CI/CD",
-    items: ["Jenkins", "Git/GitHub", "Grafana", "Splunk", "Datadog", "Jupyter Notebook", "Confluence"]
-  }
-],
+  skills: [
+    {
+      group: "Languages",
+      items: ["Java", "Python", "JavaScript", "TypeScript", "Go", "C", "C++"]
+    },
+    {
+      group: "Backend & Systems",
+      items: ["Node.js", "Spring Boot", "REST APIs", "Microservices"]
+    },
+    {
+      group: "Cloud & Infrastructure",
+      items: ["AWS (S3, Lambda, ECS)", "Azure", "Docker", "Kubernetes", "Terraform", "Kafka", "MQTT"]
+    },
+    {
+      group: "Databases",
+      items: ["MySQL", "Postgres", "MongoDB", "Cassandra"]
+    },
+    {
+      group: "Frontend",
+      items: ["React", "Angular", "HTML", "CSS"]
+    },
+    {
+      group: "DevOps & CI/CD",
+      items: ["Jenkins", "Git/GitHub", "Grafana", "Splunk", "Datadog", "Jupyter Notebook", "Confluence"]
+    }
+  ],
 };
 
 const css = `
@@ -215,33 +215,33 @@ const css = `
 
 const IconPin = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c8f060" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+    <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="3" />
   </svg>
 );
 const IconBriefcase = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c8f060" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M2 12h20"/>
+    <rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" /><path d="M2 12h20" />
   </svg>
 );
 const IconClock = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c8f060" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+    <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
   </svg>
 );
 const IconEmail = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8f060" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+    <rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
   </svg>
 );
 const IconLinkedIn = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8f060" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-    <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" />
   </svg>
 );
 const IconGithub = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c8f060" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
   </svg>
 );
 
