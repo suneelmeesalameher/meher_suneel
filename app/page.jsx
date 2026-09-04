@@ -60,11 +60,11 @@ skills: [
   },
   {
     group: "Backend & Systems",
-    items: ["Node.js", "Spring Boot", "REST APIs", "Microservices", "NumPy", "Pandas", "PyTorch", "TensorFlow"]
+    items: ["Node.js", "Spring Boot", "REST APIs", "Microservices"]
   },
   {
     group: "Cloud & Infrastructure",
-    items: ["AWS (S3, Lambda, ECS)", "Azure", "Docker", "Kubernetes", "Terraform"]
+    items: ["AWS (S3, Lambda, ECS)", "Azure", "Docker", "Kubernetes", "Terraform", "Kafka", "MQTT"]
   },
   {
     group: "Databases",
@@ -76,7 +76,7 @@ skills: [
   },
   {
     group: "DevOps & CI/CD",
-    items: ["Jenkins", "Git/GitHub", "Grafana", "Splunk", "Datadog", "Jupyter Notebook", "PyCharm"]
+    items: ["Jenkins", "Git/GitHub", "Grafana", "Splunk", "Datadog", "Jupyter Notebook", "Confluence"]
   }
 ],
 };
